@@ -2,10 +2,10 @@
 function getUrCard()    {
 let a = document.getElementById("urCard").value;
 console.log(a);
-    document.getElementById("answer").innerHTML = myFunction(a);
+    document.getElementById("answer").innerHTML = numbersToWords(a);
 }
 //*the actual writing of the numbers part*/
-function myFunction(x) {
+function numbersToWords(x) {
     /*declarations and initiations*/
     let yourCard = x;
     let places = [""," thousand"," million"," billion"," trillion"," quadrillion"," quintillion"," sextillion"," septillion"," octillion"," nonillion"," decillion"," undecidillion"," duidecillion"," quattuordecillion"," quindecillion"," sexdecillion"," sepdecillion"," duodeviginillion"," unodeviginillion"," viginillion"," "];
@@ -73,7 +73,7 @@ function printList(){
 let bigList = "";
     for(let j = 0; j <=1000; j++) {
         let boop = j.toString();
-        bigList= bigList + boop + ". "+ myFunction(boop) + "<br>";}
+        bigList= bigList + boop + ". "+ numbersToWords(boop) + "<br>";}
     document.getElementById("list").innerHTML = bigList;
 }
 
